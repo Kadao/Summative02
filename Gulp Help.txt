@@ -1,0 +1,4 @@
+Ctrl + C
+= Stops server
+
+Type "gulp" to restart server
