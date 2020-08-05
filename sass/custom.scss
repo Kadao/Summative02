@@ -83,7 +83,7 @@ input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
-/* Custom CSS */
+/* ~~~~~~~~~~~~~~~~~~~~~~ Custom CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .header {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
     height: 72px;
@@ -100,6 +100,7 @@ input:focus, textarea:focus, select:focus{
     cursor: default;
 }
 
+/* ~~~~~~~~~~~ First page ~~~~~~~~~~~ */
 .page_one {
   height: 665px;
 }
@@ -145,12 +146,25 @@ input[type="text"] {
     font-size: 24px;
 }
 
+/* ~~~~~~~~~~~ Second page ~~~~~~~~~~~ */
 .page_two {
     height: 940px;
 }
 
-.nametag {
-    text-align: center;
+.choices h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.second_question {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 50px;
+  cursor: default;
 }
 
 .number_people {
@@ -166,13 +180,13 @@ input[type="text"] {
   margin-left: 48%;
 }
 
-.number_people .select{
+.number_people .select {
   width: 45px;
   background-size: 2em;
   text-align: center;
 }
 
-.number_people .select select{
+.number_people .select select {
   width: 45px;
   background: transparent;
   line-height: 1;
@@ -182,4 +196,121 @@ input[type="text"] {
   z-index: 10;
   font-size: 1em;
   text-align: center;
+}
+
+.nametag {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ~~~~~~~~~~~ Third page ~~~~~~~~~~~ */
+.page_three {
+  height: 940px;
+}
+
+.select_place {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.select_place a {
+  text-decoration: none;
+  color: black;
+}
+
+.select_place h5 {
+  margin-top: 25px;
+}
+
+.finetext_place h4 {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  margin-left: 30px;
+  margin-top: 275px;
+}
+
+/* ~~~~~~~~~~~ Fourth page ~~~~~~~~~~~ */
+.page_four {
+  height: 940px;
+}
+
+.option_accommodation {
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+.amount_nights {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 50px;
+  cursor: default;
+}
+
+.number_nights {
+  font-size: 16px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 70px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 48%;
+}
+
+.number_nights .select {
+  width: 45px;
+  background-size: 2em;
+  text-align: center;
+}
+
+.number_nights .select select {
+  width: 45px;
+  background: transparent;
+  line-height: 1;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  z-index: 10;
+  font-size: 1em;
+  text-align: center;
+}
+
+.finetext_night h4 {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  margin-left: 30px;
+  margin-top: 375px;
+}
+
+/* ~~~~~~~~~~~ Fifth page ~~~~~~~~~~~ */
+.page_five {
+  height: 940px;
+}
+
+.meal_options {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.meal_options a {
+  text-decoration: none;
+  color: black;
+}
+
+.meal_options h5 {
+  padding: 10px;
+}
+
+/* ~~~~~~~~~~~ Sixth page ~~~~~~~~~~~ */
+.page_six {
+  height: 940px;
 }
