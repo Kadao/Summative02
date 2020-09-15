@@ -13,32 +13,30 @@
         hotel: {
           people: [1, 2],
           price: 157,
-          minMax: [1, 5]
+          nights: [1, 5]
         },
         hostel: {
           people: [1],
           price: 30,
-          minMax: [1, 10]
+          nights: [1, 10]
         },
         motel: {
             people: [2, 4],
             price: 90,
-            minMax: [3, 10]
+            nights: [3, 10]
         },
         house: {
             people: [1, 4],
             price: 240,
-            minMax: [2, 15]
+            nights: [2, 15]
         },
       }
 
       // This is for data storage
       var cloudObject= {
-
-
       };
 
-    // A click function that sends user input data to the cloudObject
+    // A click function that sends user name input data to the cloudObject
     $('#firstClick').click(function () {
       // Get the value
       var getNameVal = $("#fullname").val();
@@ -71,52 +69,116 @@
       var people = parseInt(cloudObject.selectedNumberPeople);
       //Console log var people and identify the type
       console.log(people + ' is selected')
-      console.log(typeof people);
+      // console.log(typeof people);
       //Checks whether the values within the data object are numerical
-      console.log(typeof data.hotel.people[1]);
+      // console.log(typeof data.hotel.people[1]);
       // Hotel
       // Filter checks if data is below 2
       if (people <= data.hotel.people[1]) {
         // Flag to check for infinite loop
-        console.log('1');
+        console.log('Hotel');
          alert('You can stay at the Hotel')
       }
 
       // Hostel
       // Filter checks if data is 1
       if (people == data.hostel.people[0]) {
-        console.log('2');
+        console.log('Hostel');
         alert('You can stay at the Hostel')
       }
 
       // Motel
       // Filter checks if data is between 2-4
       if (people >= data.motel.people[0] && people <= data.motel.people[1]) {
-        console.log('3');
+        console.log('Motel');
         alert('You can stay at the Motel')
        }
 
        // House
        // Filter checks if data is between 1-4
-      if (people >= data.motel.people[0] && people <= data.motel.people[1]) {
-        console.log('4');
+      if (people >= data.house.people[0] && people <= data.house.people[1]) {
+        console.log('House');
         alert('You can stay at the House')
       }
-
     } //checkPeople ENDS
 
-    // **Revision**
-    // *API revision needed
-    // *Array revision needed
-    // *(Two) Plugin revision needed
-    // *jQuery needs to be plugged in
+    document.getElementById('numberNights').addEventListener('change', function() {
+      resetAccom();
+      console.log(this.value);
+      // Adding selected people to the cloudObject
+      cloudObject.selectedNumberNights = this.value
+      console.log(cloudObject);
+      // Call the checkPeople filtering function
+      checkNights();
+    });
 
-    // Pseudocode
-    // 1. Connect click event to DOM - DONE
-    // 2. Assign name value to a variable that is accessible to the whole app
-    // 2. Call filter function from click event
-    // 3. Run filters with alerts
-    // 4. Ref data object for filters
-    // 5. A new push to the repo
+    function checkNights () {
+      // Changes var nights to an integer/ number
+      var nights = parseInt(cloudObject.selectedNumberNights);
+      // Console log var nights and identify the type
+      console.log(nights + ' is selected')
+      // console.log(typeof nights);
 
-    })();
+      // Hotel
+      // Filter checks if data is below 2
+      if (nights >= data.hotel.nights[0] && nights <= data.hotel.nights[1]) {
+        console.log('Hotel');
+         alert('You can stay at the Hotel')
+         getAccomodation(1)
+      }
+
+      // Hostel
+      // Filter checks if data is 1
+      if (nights >= data.hostel.nights[0] && nights <= data.hostel.nights[1]) {
+        console.log('Hostel');
+        alert('You can stay at the Hostel')
+        getAccomodation(2)
+      }
+
+      // Motel
+      // Filter checks if data is between 2-4
+      if (nights >= data.motel.nights[0] && nights <= data.motel.nights[1]) {
+        console.log('Motel');
+        alert('You can stay at the Motel')
+        getAccomodation(3)
+       }
+
+       // House
+       // Filter checks if data is between 1-4
+      if (nights >= data.house.nights[0] && nights <= data.house.nights[1]) {
+        console.log('House');
+        alert('You can stay at the House')
+        getAccomodation(4)
+      }
+    } //checkNights ENDS
+
+function getAccomodation (number) {
+
+    // Hotel
+    if (number === 1) {
+      $('.option-a').show(1000)
+    }
+
+    // Hostel
+    if (number === 2) {
+      $('.option-b').show(1000)
+    }
+
+    // Motel
+    if (number === 3) {
+      $('.option-c').show(1000)
+    }
+
+    // House
+    if (number === 4) {
+      $('.option-d').show(1000)
+    }
+} // getAccomodation ENDS
+
+function resetAccom () {
+      $('.option-a').hide(1000)
+      $('.option-b').hide(1000)
+      $('.option-c').hide(1000)
+      $('.option-d').hide(1000)
+}
+})();

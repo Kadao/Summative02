@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/custom.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+      .opt {
+        display: none;
+      }
+    </style>
 	<title>Accommodation Finder | NZ</title>
 </head>
 <body>
@@ -51,46 +56,19 @@
              </div>
          </div>
     </div>
-
     <div class="page_three">
         <div class="header">
             <h1>Accommodation Finder</h1>
         </div>
         <div class="title_start">
-            <h2>Here are your <b>Accommodation Options</b></h2>
-        </div>
-        <div class="choices">
-            <h4>Please select your preferred choice*</h4>
-        </div>
-
-        <div class="select_place">
-           <h5><a href="#">Hotel [$157/night] (1-5 nights)</a></h5>
-           <h5><a href="#">Hostel [$30/night] (1-10 nights)</a></h5>
-            <h5><a href="#">Motel [$90/night] (3-10 nights)</a></h5>
-           <h5><a href="#">House [$240/night] (2-15 nights)</a></h5>
-         </div>
-
-        <div class="finetext_place">
-           <h4><i>*Min/ Max nights & price per night are shown within brackets</i></h4>
-        </div>
-    </div>
-
-    <div class="page_four">
-        <div class="header">
-            <h1>Accommodation Finder</h1>
-        </div>
-        <div class="title_start">
-            <h2>You have selected</h2>
-        </div>
-        <div class="option_accommodation">
-            <h2><b>[Option]</b>
+            <h2>How many Nights?</h2>
         </div>
         <div class="amount_nights">
             <h3>Select the amount of nights you plan to stay</h3>
         </div>
         <div class="number_nights">
             <div class="select">
-               <select name="number_nights" id="number_nights">
+               <select name="number_nights" id="numberNights">
                   <option value="1" selected="selected">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -109,10 +87,25 @@
                 </select>
              </div>
          </div>
+    </div>
 
-        <div class="finetext_night">
-            <h4><i>*[Price] per night</i></h4>
+    <div class="page_four">
+        <div class="header">
+            <h1>Accommodation Finder</h1>
         </div>
+        <div class="title_start">
+            <h2>Here are your <b>Accommodation Options</b></h2>
+        </div>
+        <div class="choices">
+            <h4>Please select your preferred choice*</h4>
+        </div>
+
+        <div class="select_place" id="showAccommodation">
+           <h5 class="option-a opt"><a href="#">Hotel [$157/night] (1-5 nights)</a></h5>
+           <h5 class="option-b opt"><a href="#">Hostel [$30/night] (1-10 nights)</a></h5>
+            <h5 class="option-c opt"><a href="#">Motel [$90/night] (3-10 nights)</a></h5>
+           <h5 class="option-d opt"><a href="#">House [$240/night] (2-15 nights)</a></h5>
+         </div>
     </div>
 
     <div class="page_five">
