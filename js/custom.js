@@ -30,6 +30,12 @@
             price: 240,
             nights: [2, 15]
         },
+        mealOptions: {
+          hotel: 'Egg Sandwiches With Potato Salad: $24.00',
+          hostel: 'Exotic Student Community Beef Stew: $6.00',
+          motel: 'Cereal & Toast With Instand Coffee: $12.00',
+          house: 'Root Veges With Pasta & Meat Sauce: Free'
+        }
       }
 
       // This is for data storage
@@ -48,6 +54,10 @@
       console.log(cloudObject);
 
       console.log('First Click Works');
+
+      // Scroll to the dive in the selector below
+      var divPosition = $('#page_two').offset();
+      $('html, body').animate({scrollTop: divPosition.top}, "slow")
     });
 
     // A function that checks the value of the select
@@ -58,49 +68,54 @@
       cloudObject.selectedNumberPeople = this.value
       console.log(cloudObject);
       // Call the checkPeople filtering function
-      checkPeople();
+      // checkPeople();
+      // document.getElementById("page_one").scrollIntoView()
+
+      // Scroll to the dive in the selector below
+      var divPosition = $('#page_three').offset();
+      $('html, body').animate({scrollTop: divPosition.top}, "slow")
     });
 
     // Tells you what the variable is; string, integer, etc
     // console.log(typeof people);
 
-    function checkPeople () {
-      // Changes var people to an integer/ number
-      var people = parseInt(cloudObject.selectedNumberPeople);
-      //Console log var people and identify the type
-      console.log(people + ' is selected')
-      // console.log(typeof people);
-      //Checks whether the values within the data object are numerical
-      // console.log(typeof data.hotel.people[1]);
-      // Hotel
-      // Filter checks if data is below 2
-      if (people <= data.hotel.people[1]) {
-        // Flag to check for infinite loop
-        console.log('Hotel');
-         alert('You can stay at the Hotel')
-      }
+    // function checkPeople () {
+    //   // Changes var people to an integer/ number
+    //   var people = parseInt(cloudObject.selectedNumberPeople);
+    //   //Console log var people and identify the type
+    //   console.log(people + ' is selected')
+    //   // console.log(typeof people);
+    //   //Checks whether the values within the data object are numerical
+    //   // console.log(typeof data.hotel.people[1]);
+    //   // Hotel
+    //   // Filter checks if data is below 2
+    //   // if (people <= data.hotel.people[1]) {
+    //   //   // Flag to check for infinite loop
+    //   //   console.log('Hotel');
+    //   //    alert('You can stay at the Hotel')
+    //   // }
 
-      // Hostel
-      // Filter checks if data is 1
-      if (people == data.hostel.people[0]) {
-        console.log('Hostel');
-        alert('You can stay at the Hostel')
-      }
+    //   // // Hostel
+    //   // // Filter checks if data is 1
+    //   // if (people == data.hostel.people[0]) {
+    //   //   console.log('Hostel');
+    //   //   alert('You can stay at the Hostel')
+    //   // }
 
-      // Motel
-      // Filter checks if data is between 2-4
-      if (people >= data.motel.people[0] && people <= data.motel.people[1]) {
-        console.log('Motel');
-        alert('You can stay at the Motel')
-       }
+    //   // // Motel
+    //   // // Filter checks if data is between 2-4
+    //   // if (people >= data.motel.people[0] && people <= data.motel.people[1]) {
+    //   //   console.log('Motel');
+    //   //   alert('You can stay at the Motel')
+    //   //  }
 
-       // House
-       // Filter checks if data is between 1-4
-      if (people >= data.house.people[0] && people <= data.house.people[1]) {
-        console.log('House');
-        alert('You can stay at the House')
-      }
-    } //checkPeople ENDS
+    //   //  // House
+    //   //  // Filter checks if data is between 1-4
+    //   // if (people >= data.house.people[0] && people <= data.house.people[1]) {
+    //   //   console.log('House');
+    //   //   alert('You can stay at the House')
+    //   // }
+    // } //checkPeople ENDS
 
     document.getElementById('numberNights').addEventListener('change', function() {
       resetAccom();
@@ -113,15 +128,21 @@
     });
 
     function checkNights () {
+      // Changes var people to an integer/ number
+      var people = parseInt(cloudObject.selectedNumberPeople);
       // Changes var nights to an integer/ number
       var nights = parseInt(cloudObject.selectedNumberNights);
       // Console log var nights and identify the type
       console.log(nights + ' is selected')
       // console.log(typeof nights);
 
+      // Scroll to the dive in the selector below
+      var divPosition = $('#page_four').offset();
+      $('html, body').animate({scrollTop: divPosition.top}, "slow")
+
       // Hotel
       // Filter checks if data is below 2
-      if (nights >= data.hotel.nights[0] && nights <= data.hotel.nights[1]) {
+      if ((nights >= data.hotel.nights[0] && nights <= data.hotel.nights[1]) && (people <= data.hotel.people[1])) {
         console.log('Hotel');
          alert('You can stay at the Hotel')
          getAccomodation(1)
@@ -129,7 +150,7 @@
 
       // Hostel
       // Filter checks if data is 1
-      if (nights >= data.hostel.nights[0] && nights <= data.hostel.nights[1]) {
+      if ((nights >= data.hostel.nights[0] && nights <= data.hostel.nights[1]) && ((people == data.hostel.people[0]))) {
         console.log('Hostel');
         alert('You can stay at the Hostel')
         getAccomodation(2)
@@ -137,7 +158,7 @@
 
       // Motel
       // Filter checks if data is between 2-4
-      if (nights >= data.motel.nights[0] && nights <= data.motel.nights[1]) {
+      if ((nights >= data.motel.nights[0] && nights <= data.motel.nights[1]) && ((people >= data.motel.people[0] && people <= data.motel.people[1]))) {
         console.log('Motel');
         alert('You can stay at the Motel')
         getAccomodation(3)
@@ -145,7 +166,7 @@
 
        // House
        // Filter checks if data is between 1-4
-      if (nights >= data.house.nights[0] && nights <= data.house.nights[1]) {
+      if ((nights >= data.house.nights[0] && nights <= data.house.nights[1]) && ((people >= data.house.people[0] && people <= data.house.people[1]))) {
         console.log('House');
         alert('You can stay at the House')
         getAccomodation(4)

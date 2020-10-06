@@ -5,13 +5,11 @@
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default padding */
 ul[class],
 ol[class] {
   padding: 0;
 }
-
 /* Remove default margin */
 body,
 h1,
@@ -29,7 +27,6 @@ dl,
 dd {
   margin: 0;
 }
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -37,29 +34,24 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
   list-style: none;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 /* Make images easier to work with */
 img {
   max-width: 100%;
   display: block;
 }
-
 /* Natural flow and rhythm in articles by default */
 article > * + * {
   margin-top: 1em;
 }
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -67,7 +59,6 @@ textarea,
 select {
   font: inherit;
 }
-
 /* Remove all animations and transitions */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -77,34 +68,28 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 /* Removes the blue outline around a search bar */
 input:focus, textarea:focus, select:focus{
     outline: none;
 }
-
 /* ~~~~~~~~~~~~~~~~~~~~~~ Custom CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .header {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
     height: 72px;
 }
-
 .header h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding-top: 12px;
     padding-left: 30px;
 }
-
 .header h1:hover {
     cursor: default;
 }
-
 /* ~~~~~~~~~~~ First page ~~~~~~~~~~~ */
 .page_one {
   height: 665px;
 }
-
 .title_start h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -112,11 +97,9 @@ input:focus, textarea:focus, select:focus{
     text-align: center;
     margin-top: 200px;
 }
-
 .title_start h2:hover {
     cursor: default;
 }
-
 .first_question {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -124,33 +107,27 @@ input:focus, textarea:focus, select:focus{
     margin-top: 50px;
     cursor: default;
 }
-
 .first_input_section {
     text-align: center;
     margin-top: 20px;
 }
-
 input[type="text"] {
     padding: 5px 5px;
     margin-left: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
 }
-
 .fa-arrow-right {
     margin-left: 10px;
     cursor: pointer;
 }
-
 .fa-arrow-right:before {
     font-size: 24px;
 }
-
 /* ~~~~~~~~~~~ Second page ~~~~~~~~~~~ */
 .page_two {
     height: 940px;
 }
-
 .choices h4 {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
@@ -158,7 +135,6 @@ input[type="text"] {
   text-align: center;
   margin-top: 20px;
 }
-
 .second_question {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -166,7 +142,6 @@ input[type="text"] {
   margin-top: 50px;
   cursor: default;
 }
-
 .number_people {
   font-size: 16px;
   padding: 10px 8px 10px 14px;
@@ -179,13 +154,11 @@ input[type="text"] {
   margin-top: 20px;
   margin-left: 48%;
 }
-
 .number_people .select {
   width: 45px;
   background-size: 2em;
   text-align: center;
 }
-
 .number_people .select select {
   width: 45px;
   background: transparent;
@@ -197,32 +170,30 @@ input[type="text"] {
   font-size: 1em;
   text-align: center;
 }
-
 .nametag {
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
-
+#secondClick {
+  margin-top: 10px;
+  margin-left: 49.5%;
+}
 /* ~~~~~~~~~~~ Third page ~~~~~~~~~~~ */
 .page_three {
   height: 940px;
 }
-
 .select_place {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
-
 .select_place a {
   text-decoration: none;
   color: black;
 }
-
 .select_place h5 {
   margin-top: 25px;
 }
-
 .finetext_place h4 {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
@@ -231,17 +202,18 @@ input[type="text"] {
   margin-left: 30px;
   margin-top: 275px;
 }
-
+#thirdClick {
+    margin-top: 10px;
+    margin-left: 49.5%;
+  }
 /* ~~~~~~~~~~~ Fourth page ~~~~~~~~~~~ */
 .page_four {
   height: 940px;
 }
-
 .option_accommodation {
 text-align: center;
 font-family: 'Roboto', sans-serif;
 }
-
 .amount_nights {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -249,7 +221,6 @@ font-family: 'Roboto', sans-serif;
   margin-top: 50px;
   cursor: default;
 }
-
 .number_nights {
   font-size: 16px;
   padding: 10px 8px 10px 14px;
@@ -262,13 +233,11 @@ font-family: 'Roboto', sans-serif;
   margin-top: 20px;
   margin-left: 48%;
 }
-
 .number_nights .select {
   width: 45px;
   background-size: 2em;
   text-align: center;
 }
-
 .number_nights .select select {
   width: 45px;
   background: transparent;
@@ -280,7 +249,6 @@ font-family: 'Roboto', sans-serif;
   font-size: 1em;
   text-align: center;
 }
-
 .finetext_night h4 {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
@@ -289,28 +257,23 @@ font-family: 'Roboto', sans-serif;
   margin-left: 30px;
   margin-top: 375px;
 }
-
+#fourthClick {
+  margin-top: 10px;
+  margin-left: 49.5%;
+}
 /* ~~~~~~~~~~~ Fifth page ~~~~~~~~~~~ */
 .page_five {
   height: 940px;
 }
-
 .meal_options {
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
-
 .meal_options a {
   text-decoration: none;
   color: black;
 }
-
 .meal_options h5 {
   padding: 10px;
-}
-
-/* ~~~~~~~~~~~ Sixth page ~~~~~~~~~~~ */
-.page_six {
-  height: 940px;
 }
